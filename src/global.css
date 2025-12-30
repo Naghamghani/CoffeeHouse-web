@@ -1,0 +1,157 @@
+/* =============================
+   BASE STYLES
+   ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f5f2;
+
+  /* fix for fixed navbar */
+  padding-top: 90px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =============================
+   RESPONSIVE PACK
+   ============================= */
+
+/* ---------- TABLET (≤ 900px) ---------- */
+@media (max-width: 900px) {
+
+  /* Navbar */
+  .pro-navbar {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+    height: auto;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-box {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* Pages padding */
+  .menu-container {
+    padding: 70px 20px;
+  }
+}
+
+/* ---------- MOBILE (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+  /* Navbar takes more space when wrapped */
+  body {
+    padding-top: 120px;
+  }
+
+  /* Titles */
+  h1,
+  .menu-title {
+    font-size: 30px;
+  }
+
+  /* Menu info under title */
+  .menu-cart.under-title {
+    font-size: 16px;
+  }
+
+  /* Create button */
+  .menu-topbar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-create-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Menu grid */
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 14px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  /* Edit / Delete buttons */
+  .card-actions {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .card-btn {
+    min-width: 120px;
+  }
+
+  /* Admin & Contact forms */
+  .admin-card,
+  .contact-container,
+  .contact-card,
+  .order-summary {
+    width: 95vw;
+    padding: 22px 18px;
+  }
+
+  .admin-title {
+    font-size: 32px;
+  }
+
+  .admin-label {
+    font-size: 16px;
+  }
+}
+
+/* ---------- VERY SMALL (≤ 420px) ---------- */
+@media (max-width: 420px) {
+
+  /* Navbar */
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Buttons */
+  .card-btn {
+    width: 100%;
+  }
+}

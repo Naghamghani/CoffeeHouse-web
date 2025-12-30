@@ -1,0 +1,371 @@
+/* Home.css (Fully Responsive Professional Version) */
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 1400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+  transform: scale(1.05);
+  animation: zoomIn 9s ease-in-out infinite alternate;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.12); }
+}
+
+.hero-text {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  animation: fadeInUp 1.5s ease;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.9);
+  letter-spacing: 2px;
+  animation: slideDown 1.8s ease;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.6rem;
+  opacity: 0.9;
+  animation: fadeIn 2.5s ease;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.hero-btn {
+  margin-top: 25px;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  background: #c49b63;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  min-height: 50px;
+}
+
+.hero-btn:hover {
+  background: #b2844f;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* ============================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ============================= */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .home-container {
+    height: 90vh;
+    min-height: 450px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-btn {
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    min-height: 46px;
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .home-container {
+    height: 85vh;
+    min-height: 400px;
+    max-height: 800px;
+  }
+  
+  .hero-text {
+    padding: 15px;
+    max-width: 95%;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  
+  .hero-btn {
+    margin-top: 20px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    min-height: 42px;
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+  }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .home-container {
+    height: 80vh;
+    min-height: 350px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  
+  .hero-btn {
+    padding: 9px 20px;
+    font-size: 0.95rem;
+    min-height: 40px;
+  }
+}
+
+/* Landscape Mobile (Height <= 600px) */
+@media (max-height: 600px) and (orientation: landscape) {
+  .home-container {
+    height: 100vh;
+    min-height: 400px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-btn {
+    margin-top: 15px;
+    padding: 10px 24px;
+    min-height: 40px;
+  }
+}
+
+/* Ultra Tall Screens (Height >= 1000px) */
+@media (min-height: 1000px) {
+  .home-container {
+    max-height: 900px;
+  }
+  
+  .hero-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .hero-text p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-btn {
+    padding: 18px 40px;
+    font-size: 1.4rem;
+    min-height: 60px;
+    border-radius: 35px;
+  }
+}
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .hero-text h1 {
+    font-size: 5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.8rem;
+  }
+  
+  .hero-btn {
+    padding: 16px 36px;
+    font-size: 1.3rem;
+    min-height: 55px;
+  }
+}
+
+/* 4K Screens (2000px and above) */
+@media (min-width: 2000px) {
+  .home-container {
+    max-height: 1200px;
+  }
+  
+  .hero-text h1 {
+    font-size: 6rem;
+  }
+  
+  .hero-text p {
+    font-size: 2.2rem;
+  }
+  
+  .hero-btn {
+    padding: 20px 45px;
+    font-size: 1.5rem;
+    min-height: 65px;
+    border-radius: 35px;
+  }
+}
+
+/* ============================= */
+/* TOUCH DEVICE OPTIMIZATIONS */
+/* ============================= */
+
+/* For touch devices (remove hover effects) */
+@media (hover: none) and (pointer: coarse) {
+  .hero-btn:hover {
+    transform: none;
+  }
+  
+  .hero-btn:active {
+    background: #b2844f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+}
+
+/* For devices with hover capability */
+@media (hover: hover) and (pointer: fine) {
+  .hero-btn:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* ============================= */
+/* ACCESSIBILITY IMPROVEMENTS */
+/* ============================= */
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero-img {
+    animation: none;
+    transform: scale(1);
+  }
+  
+  .hero-text,
+  .hero-text h1,
+  .hero-text p {
+    animation: none;
+  }
+  
+  .hero-btn {
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .hero-img {
+    filter: brightness(80%);
+  }
+  
+  .hero-text {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .hero-img {
+    filter: brightness(85%);
+  }
+}
+
+/* ============================= */
+/* PRINT STYLES */
+/* ============================= */
+@media print {
+  .home-container {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+  }
+  
+  .hero-img {
+    display: none;
+  }
+  
+  .hero-text {
+    position: static;
+    color: #000;
+    animation: none;
+  }
+  
+  .hero-text h1 {
+    text-shadow: none;
+    animation: none;
+  }
+  
+  .hero-btn {
+    display: none;
+  }
+}

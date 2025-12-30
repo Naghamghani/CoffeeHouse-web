@@ -1,0 +1,33 @@
+.page {
+  padding: 140px 80px;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+   color: #d3a3a3;
+}
+
+/* main title */
+.page h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+   color: #d3a3a3;
+}
+
+/* paragraph text */
+.page p {
+  font-size: 18px;
+ color: #d3a3a3;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
